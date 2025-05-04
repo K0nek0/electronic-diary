@@ -1,0 +1,7 @@
+planner\models\Task.class
+planner\models\Category.class
+planner\controllers\MainController.class
+planner\Main.class
+planner\models\Database.class
+planner\controllers\EditController.class
+planner\controllers\MainController$1.class

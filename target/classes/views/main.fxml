@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planner.controllers.MainController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <HBox spacing="10">
+        <Label text="Поиск:"/>
+        <TextField fx:id="searchField" promptText="Введите текст для поиска" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    
+    <HBox spacing="10" style="-fx-padding: 10 0 10 0;">
+        <Label text="Категория:"/>
+        <ComboBox fx:id="categoryFilter"/>
+        
+        <Label text="Дата:"/>
+        <DatePicker fx:id="dateFilter"/>
+        
+        <Region HBox.hgrow="ALWAYS"/>
+        
+        <Button fx:id="addButton" text="Добавить" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button fx:id="editButton" text="Редактировать"/>
+        <Button fx:id="deleteButton" text="Удалить" style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+        <Button fx:id="markCompletedButton" text="Выполнено"/>
+    </HBox>
+    
+    <TableView fx:id="tasksTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Название" prefWidth="200"/>
+            <TableColumn fx:id="dueDateColumn" text="Срок выполнения" prefWidth="150"/>
+            <TableColumn fx:id="categoryColumn" text="Категория" prefWidth="150"/>
+            <TableColumn fx:id="descriptionColumn" text="Описание" prefWidth="300"/>
+        </columns>
+    </TableView>
+</VBox>
