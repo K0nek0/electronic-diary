@@ -129,7 +129,7 @@ public class MainController {
 
     private void loadCategoriesForFilter() {
         filterCategories.clear();
-        Category allCategories = new Category("Все категории", "");
+        Category allCategories = new Category("Все категории");
         filterCategories.add(0, allCategories);
         
         try (Connection conn = Database.getConnection();
@@ -237,6 +237,7 @@ public class MainController {
             stage.showAndWait();
             
             loadTasks();
+            filterTasks();
         } catch (IOException e) {
             showAlert("Ошибка", "Не удалось открыть окно редактирования", e.getMessage(), Alert.AlertType.ERROR);
         }

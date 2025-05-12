@@ -3,14 +3,12 @@ package planner.models;
 public class Category {
     private int id;
     private String name;
-    private String color;
     
     // Конструкторы, геттеры и сеттеры
     public Category() {}
     
-    public Category(String name, String color) {
+    public Category(String name) {
         this.name = name;
-        this.color = color;
     }
     
     public int getId() { return id; }
@@ -18,9 +16,6 @@ public class Category {
     
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    
-    public String getColor() { return color; }
-    public void setColor(String color) { this.color = color; }
     
     @Override
     public String toString() {
